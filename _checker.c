@@ -1,3 +1,5 @@
+#ifndef CHECKER_C
+#define CHECKER_C
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
@@ -29,3 +31,4 @@ void _checker(const char *formatData, char *arg)
 		}
 	}
 }
+#endif
