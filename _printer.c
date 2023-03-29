@@ -10,7 +10,8 @@
  */
 char _charprinter(char *string)
 {
-	return(write(1, &string, sizeof(string)));
+	write(1, string, sizeof(string));
+	return(write(1, string, sizeof(string)));
 }
 /**
  * _numprinter - prints an int
@@ -20,5 +21,6 @@ char _charprinter(char *string)
  */
 int _numprinter(int num)
 {
+	write(1, &num, sizeof(int));
 	return(write(1, &num, sizeof(int)));
 }

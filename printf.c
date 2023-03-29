@@ -18,7 +18,9 @@ int _printf(const char *format, ...)
 	p = format;
 	va_start(inputD, format);
 	for (i = 0; i < dataLen; i++)
+	{
 		_checker(p, va_arg(inputD, char *));
+	}
 	putchar('\n');
 	va_end(inputD);
 	return (0);
