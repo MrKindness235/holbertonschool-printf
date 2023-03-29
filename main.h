@@ -10,12 +10,12 @@
  * @i: input %i
  * @d: input %d
  */
-struct formatCheck check;
+struct formatCheck
 {
 	const char *format;
 	int num;
 	char *charInput;
-};
+}check_t;
 char _charprinter(char *);
 int _numprinter(int);
 int _printf(const char *format, ...);

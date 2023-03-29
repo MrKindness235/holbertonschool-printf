@@ -10,21 +10,21 @@
 void _checker(const char *formatData, char *arg)
 {
 	const char *p;
+
 	p = formatData;
 	while (*p)
 	{
 		if (*p == '%')
 		{
-			formatCheck check;
 			if (*p == 'i' || *p == 'd')
 			{
-				check.num = atoi(arg);
-				_numprinter(check.num);
+				check_t.num = atoi(arg);
+				_numprinter(check_t.num);
 			}
 			if (*p == 'c' || *p == 's')
 			{
-				check.charInput = arg;
-				_charprinter(check.charInput);
+				check_t.charInput = arg;
+				_charprinter(check_t.charInput);
 			}
 		}
 	}
