@@ -29,6 +29,7 @@ void _checker(const char *formatData, char *arg)
 				_charprinter(check_t.charInput);
 			}
 		}
+		p++;
 	}
 }
 #endif
