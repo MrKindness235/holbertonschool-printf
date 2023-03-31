@@ -1,5 +1,6 @@
-#include <stdarg.h>
 #include <string.h>
+#include <stdarg.h>
+#include <stdio.h>
 #include "main.h"
 /**
  * _printf - initializes prototype
@@ -11,17 +12,49 @@
 int _printf(const char *format, ...)
 {
 	va_list inputD;
-	unsigned int i;
-	size_t dataLen = strlen(format);
-	const char *p;
+	int n, len = 0;
 
-	p = format;
 	va_start(inputD, format);
-	for (i = 0; i < dataLen; i++)
+	while (*format)
 	{
-		_checker(p, va_arg(inputD, char *));
+		if (*format != '%')
+		{
+			putchar(*format);
+			len++;
+		}
+		else
+		{
+			format++;
+			if (*format == 's' || *format == 'c')
+			{
+				if (*format == 'c')
+				{
+					char c = va_arg(inputD, int);
+					putchar(c);
+					len++;
+				}
+				else if (*format == 's')
+				{
+					char *s = va_arg(inputD, char *);
+					if (s == NULL)
+						s = "(nil)";
+					_charprinter(s, &len);
+					len += strlen(s);
+				}
+			}
+			else if (*format == '%')
+			{
+				putchar('%');
+				len++;
+			}
+			else if (*format == 'd' || *format == 'i')
+			{
+				n = va_arg(inputD, int);
+				_numprinter(n, &len);
+			}
+		}
+		format++;
 	}
-	putchar('\n');
 	va_end(inputD);
-	return (0);
+	return (len);
 }

@@ -1,3 +1,5 @@
+#ifndef PRINTER_C
+#define PRINTER_C
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -6,12 +8,21 @@
  * _charprinter - prints a string
  * @string: string or char to be printed
  * Description: takes a given char or string and prints it
- * Return: char or string on sucess or -1 and errno
  */
-char _charprinter(char *string)
+void _charprinter(const char *string, int *len)
 {
-	write(1, string, sizeof(string));
-	return(write(1, string, sizeof(string)));
+	int stringLen = strlen(string);
+
+	if (string == NULL)
+	{
+		_charprinter("(nil)", len);
+		return;
+	}
+	else
+	{
+		write(1, string, stringLen);
+		(*len) += stringLen;
+	}
 }
 /**
  * _numprinter - prints an int
@@ -19,8 +30,21 @@ char _charprinter(char *string)
  * Description: takes an int and prints it
  * Return: int on success or -1 and errno
  */
-int _numprinter(int num)
+void _numprinter(int n, int *len)
 {
-	write(1, &num, sizeof(int));
-	return(write(1, &num, sizeof(int)));
+	unsigned int num;
+
+	if (n < 0)
+	{
+		num = -n;
+		putchar('-');
+		(*len)++;
+	}
+	else
+		num = n;
+	if (num / 10)
+		_numprinter(num / 10, len);
+	putchar(num % 10 + '0');
+	(*len)++;
 }
+#endif

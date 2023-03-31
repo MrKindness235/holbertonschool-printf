@@ -9,14 +9,14 @@
  * @num: int to pass
  * @charInput: char to pass
  */
-struct formatCheck
+typedef struct formatCheck
 {
 	const char *format;
 	int num;
-	char *charInput;
-} check_t;
-char _charprinter(char *string);
-int _numprinter(int num);
+	const char *charInput;
+} check;
+void _charprinter(const char *string, int *len);
+void _numprinter(int n, int *len);
 int _printf(const char *format, ...);
-void _checker(const char *formatData, char *arg);
+int _checker(const char *formatData, const char *arg, int *len);
 #endif
