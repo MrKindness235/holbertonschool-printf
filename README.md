@@ -24,13 +24,13 @@ Thanks to the clever machinations of Sebastian and Me we got to create a functio
 _printf();
 
 # 2- Fill the arguments with what you wish to print:
-_printf(Hello World!);
+_printf("Hello World!");
 
 # This prints:
 Hello World!
 
 # 4- But if we wish to actually use the main strenght of this function, formats, we should write:
-_printf(%s World!, greeting);
+_printf("%s World!", greeting);
 
 # 5- _printf reads %s as "print given (s)tring" and finds that string in the arguments of your calling. If greeting has the value "Hello":
 Hello World!
