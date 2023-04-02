@@ -16,10 +16,24 @@ This is, of course, to be expected from two young Holbies who are just stepping 
 teamworking, etc. By no means we expected to keep this level of quiality and we hope, wish and enssure we will 
 learn, work and improve over the shortcomings along the way.
 
-~REASONS TO READ THIS DOCUMENT:
-You are:
-a) Part of the Holberton Staff or (a1) part of the Holberton alumnae. 
-b) Someone who is truly interested in learning the reasons of our code. 
-c) Us from the future (Hello us! :]) 
-d) Not intented to read this document at all. 
-(If the last case is indeed true, I encourage you to keep on reading. You are too deep in the rabbit hole after all)
+~USAGE:
+Thanks to the clever machinations of Sebastian and Me we got to create a function that prints using a format.
+"But how do I use it?" I hear you think. Well, is as easy as this:
+
+# 1- Call the "_printf()" function in your code:
+_printf();
+
+# 2- Fill the arguments with what you wish to print:
+_printf(Hello World!);
+
+# This prints:
+Hello World!
+
+# 4- But if we wish to actually use the main strenght of this function, formats, we should write:
+_printf(%s World!, greeting);
+
+# 5- _printf reads %s as "print given (s)tring" and finds that string in the arguments of your calling. If greeting has the value "Hello":
+Hello World!
+
+# And if greeting has the value "Welcome":
+Welcome World!
