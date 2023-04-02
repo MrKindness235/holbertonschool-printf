@@ -21,4 +21,4 @@ You are a) Part of the Holberton Staff or (a1) part of the Holberton alumnae.
 	b) Someone who is truly interested in learning the reasons of our code.
 	c) Us from the future (Hello us! :])
 	d) Not intented to read this document at all.
-	(If the last case is indeed true, I encourage you to keep on reading. You are too deep in the rabbit hole after all~)
+	(If the last case is indeed true, I encourage you to keep on reading. You are too deep in the rabbit hole after all)
