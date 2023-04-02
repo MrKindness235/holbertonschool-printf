@@ -7,7 +7,7 @@ a piece of information to help contextualize the inner workings of this project.
 Not working completely. Fortunately enough, most of it works as intended.
 
 ~INTENDED OUTCOME:
-Tasked by Holberton School Uruguay's tutelage, we were tasked to create a working clone of the C function "printf()".
+Under Holberton School Uruguay's tutelage, we were tasked to create a working clone of the C function "printf()".
 Just a bit cut from the original functonalities and outputs (Does not print floats).
 
 ~REDACTER'S NOTES:
