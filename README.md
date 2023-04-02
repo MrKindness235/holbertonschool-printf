@@ -17,7 +17,7 @@ teamworking, etc. By no means are we expected to keep this level of quality and 
 learn, work and improve over the shortcomings along the way.
 
 # ~USAGE:
-Thanks to clever machinations of Sebastian and we got to create a function that prints using a format.
+Thanks to the clever machinations of Sebastian we got to create a function that prints using a format.
 
 # 1- Call the "_printf()" function in your code:
 _printf();
