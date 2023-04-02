@@ -31,7 +31,7 @@ Hello World!
 # 4- But if we wish to use the main strength of this function, formats, we should write:
 _printf("%s World!", greeting);
 
-# 5- _printf reads %s as "print given (s) trying" and finds that string in the arguments of your calling. If the greeting has the value "Hello":
+# 5- _printf reads %s as "print given (s)tring" and finds that string in the arguments of your calling. If the greeting has the value "Hello":
 Hello World!
 
 # 6- Types of formats allowed in this function are (%d), (%i), (%c), and (%s).
